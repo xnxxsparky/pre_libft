@@ -6,7 +6,7 @@
 /*   By: bcausseq <bcausseq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 03:04:36 by bcausseq          #+#    #+#             */
-/*   Updated: 2024/09/30 03:37:36 by bcausseq         ###   ########.fr       */
+/*   Updated: 2024/10/01 01:08:01 by bcausseq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,24 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned char	*d;
-	unsigned char	*s;
-	unsigned char	*tmp = NULL;
+	char	*d;
+	char	*s;
+	size_t	i;
 
-	d = (unsigned char *)dest;
-	s = (unsigned char *)src;
-	tmp = ft_memcpy(tmp, s, n);
-	d = ft_memcpy(d, tmp, n);
+	if (!dest && !src)
+		return (NULL);
+	d = (char *)dest;
+	s = (char *)src;
+	i = 0;
+	if (d > s)
+	{
+		while (n-- > 0)
+			d[n] = s[n];
+	}
+	else
+	{
+		while (i++ < n)
+			d[i] = s[i];
+	}
 	return (dest);
-}
-#include <stdio.h>
-int	main(void)
-{
-	char	dest[] = "je mange des pieds";
-	char	src[] = "NON ";
-	printf("%p", ft_memmove(dest, src, 4));
-	return (0);
 }

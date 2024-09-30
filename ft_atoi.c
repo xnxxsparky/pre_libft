@@ -6,7 +6,7 @@
 /*   By: bcausseq <bcausseq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 21:35:15 by bcausseq          #+#    #+#             */
-/*   Updated: 2024/09/30 21:47:15 by bcausseq         ###   ########.fr       */
+/*   Updated: 2024/10/01 00:00:16 by bcausseq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,4 @@ int	ft_atoi(const char *nptr)
 		i++;
 	}
 	return (sign * ret);
-}
-#include <stdio.h>
-int	main(void)
-{
-	int ret = atoi("		    +-12");
-	int bis = ft_atoi("		    -99999099");
-	printf("%d", ret);
-	printf("\n%d", bis);
-	return (0);
 }
