@@ -6,7 +6,7 @@
 /*   By: bcausseq <bcausseq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 23:30:24 by bcausseq          #+#    #+#             */
-/*   Updated: 2024/10/01 00:38:00 by bcausseq         ###   ########.fr       */
+/*   Updated: 2024/10/01 20:42:56 by bcausseq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -29,9 +29,11 @@ char	*ft_strcpy(char *dst, const char *src);
 char	*ft_strncpy(char *dst, const char *src, size_t sz);
 char	*ft_strcat(char *dst, const char *src);
 char	*ft_strncat(char *dst, const char *src, size_t sz);
+size_t	ft_strlcat(char *dst, const char *s, size_t sz);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strstr(const char *haystack, const char *needle);
+char	*ft_strnstr(const char *haystack, const char *needle, size_t n);
 int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_atoi(const char *nptr);

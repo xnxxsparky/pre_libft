@@ -1,25 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bcausseq <bcausseq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/30 18:23:48 by bcausseq          #+#    #+#             */
-/*   Updated: 2024/10/01 18:23:39 by bcausseq         ###   ########.fr       */
+/*   Created: 2024/10/01 18:29:58 by bcausseq          #+#    #+#             */
+/*   Updated: 2024/10/01 20:43:10 by bcausseq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+size_t	ft_strlcat(char *dst, const char *src, size_t sz)
 {
-	size_t	i;
+	size_t	s_len;
+	size_t	d_len;
 
-	i = 0;
-	while (s1[i] == s2[i] && (i < n) && s1[i])
-		i++;
-	if (i >= n)
-		return (0);
-	return (s1[i] - s2[i]);
+	s_len = ft_strlen(src);
+	d_len = ft_strlen(dst);
+	if (d_len >= sz)
+		return (sz + s_len);
+	if (s_len < sz - d_len)
+		ft_memcpy(dst + d_len, src, s_len + 1);
+	else
+	{
+		ft_memcpy(dst + d_len, src, sz - d_len - 1);
+		dst[sz - 1] = '\0';
+	}
+	return (d_len + s_len);
 }

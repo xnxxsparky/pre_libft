@@ -1,25 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bcausseq <bcausseq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/30 18:23:48 by bcausseq          #+#    #+#             */
-/*   Updated: 2024/10/01 18:23:39 by bcausseq         ###   ########.fr       */
+/*   Created: 2024/10/01 18:09:28 by bcausseq          #+#    #+#             */
+/*   Updated: 2024/10/01 18:28:24 by bcausseq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
 {
 	size_t	i;
+	int		needle_len;
 
 	i = 0;
-	while (s1[i] == s2[i] && (i < n) && s1[i])
+	needle_len = ft_strlen(needle);
+	if (!*needle)
+		return ((char *)haystack);
+	while (haystack[i] && (i < n))
+	{
+		if (haystack[i] == needle[0])
+		{
+			if (ft_strncmp(haystack + i, needle, needle_len) == 0)
+				return ((char *)haystack + i);
+		}
 		i++;
-	if (i >= n)
-		return (0);
-	return (s1[i] - s2[i]);
+	}
+	return (0);
 }
