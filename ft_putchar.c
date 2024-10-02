@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bcausseq <bcausseq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/30 19:05:05 by bcausseq          #+#    #+#             */
-/*   Updated: 2024/10/02 22:51:13 by bcausseq         ###   ########.fr       */
+/*   Created: 2024/10/02 23:52:41 by bcausseq          #+#    #+#             */
+/*   Updated: 2024/10/02 23:53:20 by bcausseq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+void	ft_putchar(char c)
 {
-	return (ft_isupper(c) || ft_islower(c));
+	write(1, &c, 1);
 }

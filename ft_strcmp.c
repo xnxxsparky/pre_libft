@@ -6,7 +6,7 @@
 /*   By: bcausseq <bcausseq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 18:16:12 by bcausseq          #+#    #+#             */
-/*   Updated: 2024/09/30 18:23:02 by bcausseq         ###   ########.fr       */
+/*   Updated: 2024/10/02 22:42:27 by bcausseq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_strcmp(const char *s1, const char *s2)
 	size_t	i;
 
 	i = 0;
-	while (s1[i] == s2[i])
+	while (s1[i] == s2[i] && (s1[i]))
 		i++;
 	return (s1[i] - s2[i]);
 }

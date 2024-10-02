@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strclr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bcausseq <bcausseq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/30 19:05:05 by bcausseq          #+#    #+#             */
-/*   Updated: 2024/10/02 22:51:13 by bcausseq         ###   ########.fr       */
+/*   Created: 2024/10/02 22:21:50 by bcausseq          #+#    #+#             */
+/*   Updated: 2024/10/02 22:33:01 by bcausseq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+void	ft_strclr(char *s)
 {
-	return (ft_isupper(c) || ft_islower(c));
+	size_t	i;
+
+	i = 0;
+	while (s[i])
+		s[i++] = '\0';
 }

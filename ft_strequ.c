@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bcausseq <bcausseq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/30 19:05:05 by bcausseq          #+#    #+#             */
-/*   Updated: 2024/10/02 22:51:13 by bcausseq         ###   ########.fr       */
+/*   Created: 2024/10/02 22:36:10 by bcausseq          #+#    #+#             */
+/*   Updated: 2024/10/02 22:48:11 by bcausseq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+int	ft_strequ(char const *s1, char const *s2)
 {
-	return (ft_isupper(c) || ft_islower(c));
+	if (*s1 && *s2)
+	{
+		if (ft_strcmp(s1, s2) == 0)
+			return (1);
+	}
+	return (0);
 }
