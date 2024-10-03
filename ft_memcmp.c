@@ -6,7 +6,7 @@
 /*   By: bcausseq <bcausseq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 00:26:00 by bcausseq          #+#    #+#             */
-/*   Updated: 2024/10/03 17:15:17 by bcausseq         ###   ########.fr       */
+/*   Updated: 2024/10/03 20:03:33 by bcausseq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t	i;
+	size_t			i;
 	unsigned char	*side_one;
 	unsigned char	*side_two;
 

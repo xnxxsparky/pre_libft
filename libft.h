@@ -6,7 +6,7 @@
 /*   By: bcausseq <bcausseq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 23:30:24 by bcausseq          #+#    #+#             */
-/*   Updated: 2024/10/02 23:59:15 by bcausseq         ###   ########.fr       */
+/*   Updated: 2024/10/03 19:35:04 by bcausseq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -49,6 +49,8 @@ int		ft_tolower(int c);
 void	ft_strclr(char *s);
 int		ft_strequ(char const *s1, char const *s2);
 int		ft_strnequ(char const *s1, char const *s2, size_t n);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_itoa(int n);
 void	ft_putchar(char c);
 void	ft_putstr(char const *s);
 void	ft_putendl(char const *s);
