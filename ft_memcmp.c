@@ -6,7 +6,7 @@
 /*   By: bcausseq <bcausseq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 00:26:00 by bcausseq          #+#    #+#             */
-/*   Updated: 2024/10/01 00:37:45 by bcausseq         ###   ########.fr       */
+/*   Updated: 2024/10/03 17:15:17 by bcausseq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,12 @@
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t	i;
-	char	*side_one;
-	char	*side_two;
+	unsigned char	*side_one;
+	unsigned char	*side_two;
 
 	i = 0;
-	side_one = (void *)s1;
-	side_two = (void *)s2;
+	side_one = (unsigned char *)s1;
+	side_two = (unsigned char *)s2;
 	while ((side_one[i] == side_two[i]) && i < n)
 		i++;
 	if (i >= n)
