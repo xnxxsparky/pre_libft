@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_striter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bcausseq <bcausseq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/03 19:19:34 by bcausseq          #+#    #+#             */
-/*   Updated: 2024/10/04 02:32:18 by bcausseq         ###   ########.fr       */
+/*   Created: 2024/10/04 01:09:35 by bcausseq          #+#    #+#             */
+/*   Updated: 2024/10/04 01:54:57 by bcausseq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+void	ft_striter(char *s, void (*f)(char *))
 {
-	size_t	size;
-	char	*ret;
-
-	if (!s1 || !s2)
-		return (0);
-	size = ft_strlen(s1) + ft_strlen(s2);
-	ret = (char *)malloc((size + 1) * sizeof(char));
-	*ret = 0;
-	if (!ret)
-		return (0);
-	strcat(ret, s1);
-	return (strcat(ret, s2));
+	if (s != NULL && f != NULL)
+	{
+		while (*s)
+		{
+			(*f)(s);
+			s++;
+		}
+	}
 }

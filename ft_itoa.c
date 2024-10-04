@@ -6,7 +6,7 @@
 /*   By: bcausseq <bcausseq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 19:03:31 by bcausseq          #+#    #+#             */
-/*   Updated: 2024/10/03 19:41:20 by bcausseq         ###   ########.fr       */
+/*   Updated: 2024/10/04 02:42:35 by bcausseq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ char	*ft_itoa(int n)
 
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
+	if (n == 0)
+		return (ft_strdup("0"));
 	len = int_size(n);
 	ret = (char *)malloc((len + 1) * sizeof(char));
 	if (!ret)
