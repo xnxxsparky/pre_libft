@@ -6,7 +6,7 @@
 /*   By: bcausseq <bcausseq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 23:30:24 by bcausseq          #+#    #+#             */
-/*   Updated: 2024/10/04 02:13:34 by bcausseq         ###   ########.fr       */
+/*   Updated: 2024/10/05 00:54:41 by bcausseq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -15,6 +15,13 @@
 # include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
+
+typedef struct s_list
+{
+	void			*content;
+	size_t			content_size;
+	struct s_list	*next;
+}	t_list;
 
 void	*ft_memset(void *s, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
@@ -68,4 +75,9 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(const char *s, int fd);
 void	ft_putendl_fd(const char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+t_list	*ft_lstnew(void const *content, size_t size);
+void	*ft_memdup(void const *s, size_t len);
+void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
+void	ft_lstadd(t_list **alst, t_list *new);
+void	ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 #endif
